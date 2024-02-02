@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/word_profile_background.iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/word_profile_background"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/word_profile.iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/profileimg"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintTop_toTopOf="@id/word_profile_background.iv"
+                app:layout_constraintStart_toStartOf="@id/word_profile_background.iv"/>
+
+            <TextView
+                android:id="@+id/word_name.tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="김샛별"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@id/word_profile.iv"
+                app:layout_constraintStart_toEndOf="@id/word_profile.iv"
+                app:layout_constraintBottom_toTopOf="@id/word_succ_bar.iv"/>
+
+            <TextView
+                android:id="@+id/word_age.tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6세"
+                android:textSize="16sp"
+                android:textColor="#B5B6BD"
+                android:layout_marginStart="6dp"
+                app:layout_constraintTop_toTopOf="@id/word_name.tv"
+                app:layout_constraintStart_toEndOf="@id/word_name.tv"/>
+
+            <ImageView
+                android:id="@+id/word_succ_bar.iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/word_succ_bar"
+                android:layout_marginTop="6dp"
+                app:layout_constraintTop_toBottomOf="@id/word_name.tv"
+                app:layout_constraintStart_toStartOf="@id/word_name.tv"
+                app:layout_constraintBottom_toBottomOf="@id/word_profile.iv"/>
+
+            <TextView
+                android:id="@+id/word_succ.tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="832"
+                android:textColor="#FF9F5A"
+                android:textSize="12sp"
+                app:layout_constraintTop_toTopOf="@id/word_age.tv"
+                app:layout_constraintEnd_toStartOf="@id/word_total.tv"/>
+
+            <TextView
+                android:id="@+id/word_total.tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/1624"
+                android:textSize="12sp"
+                android:textColor="#B5B6BD"
+                app:layout_constraintTop_toTopOf="@id/word_succ.tv"
+                app:layout_constraintEnd_toEndOf="@id/word_succ_bar.iv"/>
+
+            <ImageView
+                android:id="@+id/word_correct.iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/word_correct_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/word_profile_background.iv"
+                app:layout_constraintEnd_toStartOf="@id/word_wrong.iv"/>
+
+            <TextView
+                android:id="@+id/word_correct_cnt.tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="832"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="@id/word_correct.iv"
+                app:layout_constraintStart_toStartOf="@id/word_correct.iv"
+                app:layout_constraintEnd_toEndOf="@id/word_correct.iv"/>
+
+            <TextView
+                android:id="@+id/word_correct_sub.tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내가 아는 단어 수"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/word_correct_cnt.tv"
+                app:layout_constraintStart_toStartOf="@id/word_correct.iv"
+                app:layout_constraintEnd_toEndOf="@id/word_correct.iv"/>
+
+            <ImageView
+                android:id="@+id/word_wrong.iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/word_wrong_background"
+                app:layout_constraintTop_toTopOf="@id/word_correct.iv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/word_correct.iv"/>
+
+            <TextView
+                android:id="@+id/word_wrong_cnt.tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="112"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="@id/word_wrong.iv"
+                app:layout_constraintStart_toStartOf="@id/word_wrong.iv"
+                app:layout_constraintEnd_toEndOf="@id/word_wrong.iv"/>
+
+            <TextView
+                android:id="@+id/word_wrong_sub.tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내가 배우고 있는 단어"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/word_wrong_cnt.tv"
+                app:layout_constraintStart_toStartOf="@id/word_wrong.iv"
+                app:layout_constraintEnd_toEndOf="@id/word_wrong.iv"/>
+
+            <ImageView
+                android:id="@+id/word_section.tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/book_section"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/word_correct.iv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/word_studying.tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="학습중인 단어장"
+                android:textSize="18sp"
+                android:textColor="#1F2021"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/word_section.tv"
+                app:layout_constraintStart_toStartOf="@id/word_correct.iv"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/word_studying.rv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                tools:listitem="@layout/item_wordcard"
+                app:layout_constraintTop_toBottomOf="@id/word_studying.tv"
+                app:layout_constraintStart_toStartOf="@id/word_correct.iv"
+                app:layout_constraintEnd_toEndOf="@id/word_wrong.iv"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

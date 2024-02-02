@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/wordbanner.iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/word_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/word_eng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:text="Car"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/wordbanner.iv"
+        app:layout_constraintStart_toStartOf="@id/wordbanner.iv"
+        app:layout_constraintTop_toTopOf="@id/wordbanner.iv"/>
+
+    <TextView
+        android:id="@+id/word_kor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="[차, 자동차]"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/word_eng"
+        app:layout_constraintEnd_toEndOf="@id/wordbanner.iv"
+        app:layout_constraintStart_toStartOf="@id/wordbanner.iv"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/word_meaningshow"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/wordbanner.iv"
+            app:layout_constraintStart_toStartOf="@id/wordbanner.iv"
+            app:layout_constraintEnd_toEndOf="@id/wordbanner.iv"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
