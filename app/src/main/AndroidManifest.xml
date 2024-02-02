@@ -13,7 +13,16 @@
         android:theme="@style/Theme.Main"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".WordafterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WordlistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WordcheckActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WordActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
