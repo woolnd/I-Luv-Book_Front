@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="360dp"
+    android:layout_height="match_parent"
+    tools:context=".InitActivity"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/init_header.cl"
+        android:layout_width="360dp"
+        android:layout_height="58dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/init_logo.iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/init_logo"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/init_profile.iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/init_profile"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/init.fl"
+        android:layout_width="360dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/init_header.cl"
+        app:layout_constraintStart_toStartOf="@id/init_header.cl"
+        app:layout_constraintEnd_toEndOf="@id/init_header.cl"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
