@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360dp"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/load_back.iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/load_main_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/load_main_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginRight="47dp" />
+
+    <ImageView
+        android:id="@+id/load_chip.iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/load_chip"
+        app:layout_constraintTop_toTopOf="@id/load_main_iv"
+        app:layout_constraintLeft_toLeftOf="@id/load_main_iv"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="40dp" />
+
+    <TextView
+        android:id="@+id/load_chip.tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="English"
+        app:layout_constraintTop_toTopOf="@id/load_chip.iv"
+        app:layout_constraintLeft_toLeftOf="@id/load_chip.iv"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/load_main.tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나만의 동화책"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/load_chip.iv"
+        app:layout_constraintLeft_toLeftOf="@id/load_chip.iv"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/load_sub1.tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="세상에 하나밖에 없는 나만의 이야기"
+        app:layout_constraintLeft_toLeftOf="@id/load_chip.iv"
+        app:layout_constraintTop_toBottomOf="@id/load_main.tv"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/load_sub2.tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="두구두구\n어떤 동화책이 만들어질까?"
+        app:layout_constraintLeft_toLeftOf="@id/load_main_iv"
+        app:layout_constraintTop_toBottomOf="@id/load_main_iv"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-5dp"
+        android:textSize="24sp"
+        android:textColor="#3F3F42"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/load_sub3.tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="멋진 동화책이 만들어지고 있어요\n조금만 기다려주세요 :)"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/load_sub2.tv"
+        app:layout_constraintLeft_toLeftOf="@id/load_main_iv"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="60dp"
+        android:textSize="14sp"
+        android:textColor="#98989E" />
+
+    <ImageView
+        android:id="@+id/load_cancel.iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/load_cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/load_cancel.tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="취소하기"
+        android:textSize="16sp"
+        android:textColor="#98989E"
+        app:layout_constraintTop_toTopOf="@id/load_cancel.iv"
+        app:layout_constraintLeft_toLeftOf="@id/load_cancel.iv"
+        app:layout_constraintRight_toRightOf="@id/load_cancel.iv"
+        android:layout_marginTop="18dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
