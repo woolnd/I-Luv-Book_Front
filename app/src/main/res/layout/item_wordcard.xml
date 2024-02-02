@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/word_wordcard.iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/word_book_card1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/word_booktitle.iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Happy lucy Day!"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintTop_toTopOf="@+id/word_wordcard.iv"
+        app:layout_constraintStart_toStartOf="@+id/word_wordcard.iv"/>
+
+    <ImageView
+        android:id="@+id/word_book_startbtn.iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/word_book_startbtn1"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="@+id/word_wordcard.iv"
+        app:layout_constraintBottom_toBottomOf="@+id/word_wordcard.iv"/>
+
+    <TextView
+        android:id="@+id/word_succ.tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toTopOf="@id/word_wordcard.iv"
+        app:layout_constraintEnd_toStartOf="@id/word_total.tv"
+        app:layout_constraintBottom_toBottomOf="@id/word_wordcard.iv" />
+
+    <TextView
+        android:id="@+id/word_total.tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/10"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toTopOf="@id/word_wordcard.iv"
+        app:layout_constraintEnd_toEndOf="@id/word_wordcard.iv"
+        app:layout_constraintBottom_toBottomOf="@id/word_wordcard.iv"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

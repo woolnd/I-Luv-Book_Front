@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/word_af_booktitle.iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/word_booktitle_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/word_af_booktitletoken.iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/word_booktitle_chip"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="@id/word_af_booktitle.iv"
+                app:layout_constraintTop_toTopOf="@id/word_af_booktitle.iv"/>
+
+            <TextView
+                android:id="@+id/word_af_booktitle.tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="56dp"
+                android:text="The dog and His bone"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/word_af_booktitle.iv"
+                app:layout_constraintTop_toTopOf="@+id/word_af_booktitle.iv"/>
+
+            <!--모르는 단어-->
+            <ImageView
+                android:id="@+id/word_af_wrongbackground.iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/word_wordwrong_background"
+                app:layout_constraintEnd_toEndOf="@id/word_af_booktitle.iv"
+                app:layout_constraintStart_toStartOf="@id/word_af_booktitle.iv"
+                app:layout_constraintTop_toBottomOf="@id/word_af_booktitle.iv" />
+
+            <ImageView
+                android:id="@+id/word_af_wordwrong_icon.iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/word_questionmark_gray"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toTopOf="@+id/word_af_wrongbackground.iv"
+                app:layout_constraintStart_toStartOf="@+id/word_af_booktitletoken.iv"/>
+
+            <TextView
+                android:id="@+id/word_af_wordwrong_text.iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내가 모르는 단어"
+                android:textSize="14sp"
+                android:textColor="#1F2021"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@+id/word_af_wordwrong_icon.iv"
+                app:layout_constraintStart_toEndOf="@+id/word_af_wordwrong_icon.iv" />
+
+            <LinearLayout
+                android:id="@+id/word_af_keyword_wrong.ll"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@+id/word_af_wordwrong_icon.iv"
+                app:layout_constraintTop_toBottomOf="@+id/word_af_wordwrong_icon.iv">
+
+                <TextView
+                    android:id="@+id/word_af_keyword_wrong.tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:background="@drawable/word_keywordchip"
+                    android:text="bio머시기gddddddddd"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="#5C5D61"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"/>
+            </LinearLayout>
+
+            <!--아는 단어-->
+            <ImageView
+                android:id="@+id/word_af_correctbackground.iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/word_wordcorrect_background"
+                app:layout_constraintEnd_toEndOf="@+id/word_af_wrongbackground.iv"
+                app:layout_constraintStart_toStartOf="@+id/word_af_wrongbackground.iv"
+                app:layout_constraintTop_toBottomOf="@+id/word_af_wrongbackground.iv" />
+
+            <ImageView
+                android:id="@+id/word_af_wordcorrect_icon.iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/word_check"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toTopOf="@+id/word_af_correctbackground.iv"
+                app:layout_constraintStart_toStartOf="@+id/word_af_booktitletoken.iv"/>
+
+            <TextView
+                android:id="@+id/word_af_wordcorrect_text.iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내가 아는 단어"
+                android:textSize="14sp"
+                android:textColor="#1F2021"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@+id/word_af_wordcorrect_icon.iv"
+                app:layout_constraintStart_toEndOf="@+id/word_af_wordcorrect_icon.iv" />
+
+            <LinearLayout
+                android:id="@+id/word_af_keyword_correct.ll"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@+id/word_af_wordcorrect_icon.iv"
+                app:layout_constraintTop_toBottomOf="@+id/word_af_wordcorrect_icon.iv">
+
+                <TextView
+                    android:id="@+id/word_af_keyword_correct.tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:background="@drawable/word_keywordchip"
+                    android:text="bio머시기gddddddddd"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="#5C5D61"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
