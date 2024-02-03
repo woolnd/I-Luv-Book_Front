@@ -2,6 +2,8 @@ package com.example.main
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AlertDialog
@@ -51,35 +53,41 @@ class LoadActivity: AppCompatActivity() {
 
         Log.d("on_off", on_off.toString())
 
-        val request = TaleCreate(model, textlist)
-        Service.makeFairytale("low-grade", request).enqueue(object : Callback<TaleResponse> {
-            var dialog = AlertDialog.Builder(this@LoadActivity)
-            override fun onResponse(
-                call: Call<TaleResponse>,
-                response: Response<TaleResponse>
-            ) { //서버에서 받은 코드값을 duplic_code 객체에 넣음
-                var result = response.body() //서버에서 받은 코드값을 duplic_code 객체에 넣음
-                if (result != null) {
-
-                    val intent = Intent(this@LoadActivity, BookActivity::class.java)
-                    intent.putExtra("title", result.title)
-                    intent.putExtra("contents", result.engTale)
-                    intent.putExtra("keywords", result.keywords)
-                    startActivity(intent)
-
-                } else {
-                    dialog.setTitle("생성 실패")
-                    dialog.setMessage("생성에 실패하였습니다.")
-                    dialog.show()
-
-                }
-
-            }
-            override fun onFailure(call: Call<TaleResponse>, t: Throwable) {
-                dialog.setTitle("통신 실패")
-                dialog.setMessage(t.toString())
-                dialog.show()
-            }
-        })
+//        val request = TaleCreate(model, textlist)
+//        Service.makeFairytale("infant", request).enqueue(object : Callback<TaleResponse> {
+//            var dialog = AlertDialog.Builder(this@LoadActivity)
+//            override fun onResponse(
+//                call: Call<TaleResponse>,
+//                response: Response<TaleResponse>
+//            ) { //서버에서 받은 코드값을 duplic_code 객체에 넣음
+//                var result = response.body() //서버에서 받은 코드값을 duplic_code 객체에 넣음
+//                if (result != null) {
+//
+//                    val intent = Intent(this@LoadActivity, BookActivity::class.java)
+//                    intent.putExtra("title", result.title)
+//                    intent.putExtra("contents", result.engTale)
+//                    intent.putExtra("keywords", result.keywords)
+//                    startActivity(intent)
+//
+//                } else {
+//                    dialog.setTitle("생성 실패")
+//                    dialog.setMessage("생성에 실패하였습니다.")
+//                    dialog.show()
+//
+//                }
+//
+//            }
+//            override fun onFailure(call: Call<TaleResponse>, t: Throwable) {
+//                dialog.setTitle("통신 실패")
+//                dialog.setMessage(t.toString())
+//                dialog.show()
+//            }
+//        })
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this@LoadActivity, TalkActivity::class.java)
+            // 여기에 필요한 intent.putExtra() 호출을 추가할 수 있습니다.
+            startActivity(intent)
+            finish() // LoadActivity 종료
+        }, 10000)
     }
 }

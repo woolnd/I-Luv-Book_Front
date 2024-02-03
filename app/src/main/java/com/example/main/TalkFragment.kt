@@ -7,16 +7,17 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.main.databinding.FragmentBookBinding
+import com.example.main.databinding.FragmentTalkBinding
 
-class BookFragment: Fragment() {
+class TalkFragment: Fragment() {
 
-    lateinit var binding: FragmentBookBinding
+    lateinit var binding: FragmentTalkBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentBookBinding.inflate(inflater, container, false)
+        binding = FragmentTalkBinding.inflate(inflater, container, false)
 
 
         binding.bookKeywordRv.apply {
@@ -28,23 +29,9 @@ class BookFragment: Fragment() {
 
 
         binding.bookContentRv.apply {
-            adapter = arguments?.getStringArrayList("eng")?.let { ContentAdapter().build(it) }
+            adapter = arguments?.getStringArrayList("eng")?.let { TalkAdapter().build(it) }
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         }
         return binding.root
-    }
-
-    fun onPrimaryButtonOn() {
-        binding.bookContentRv.apply {
-            adapter = arguments?.getStringArrayList("kor")?.let { ContentAdapter().build(it) }
-            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        }
-    }
-
-    fun onPrimaryButtonOff() {
-        binding.bookContentRv.apply {
-            adapter = arguments?.getStringArrayList("eng")?.let { ContentAdapter().build(it) }
-            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        }
     }
 }

@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/content.tv"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:paddingBottom="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/plus.cl"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/content.tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/line.ive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/choice"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/line.ive"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/c1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/off"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/a"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="@id/c1"
+            app:layout_constraintStart_toStartOf="@id/c1"/>
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Four leg donkey"
+            android:textStyle="bold"
+            android:textColor="#6A6AFF"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toTopOf="@id/c1"
+            app:layout_constraintStart_toEndOf="@id/b1"/>
+
+        <TextView
+            android:id="@+id/tt1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="You’ve got four legs. Look what I can do,says Nicholas. "
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/t1"
+            app:layout_constraintStart_toStartOf="@id/b1"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="너는 네 개의 다리가 있어. 내가 무엇을 할 수 있는지 봐봐 라고 니콜라스가 말한다"
+            android:textColor="#5C5D61"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tt1"
+            app:layout_constraintStart_toStartOf="@id/tt1"/>
+
+        <ImageView
+            android:id="@+id/c2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/off"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/c1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/b2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/b"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="@id/c2"
+            app:layout_constraintStart_toStartOf="@id/c2"/>
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Two leg rabbit"
+            android:textStyle="bold"
+            android:textColor="#6A6AFF"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toTopOf="@id/c2"
+            app:layout_constraintStart_toEndOf="@id/b2"/>
+
+        <TextView
+            android:id="@+id/tt2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="You’ve got Two legs. Look what I can do,says Nicholas. "
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/t2"
+            app:layout_constraintStart_toStartOf="@id/b2"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="너는 네 개의 다리가 있어. 내가 무엇을 할 수 있는지 봐봐 라고 니콜라스가 말한다"
+            android:textColor="#5C5D61"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tt2"
+            app:layout_constraintStart_toStartOf="@id/tt2"/>
+
+        <ImageView
+            android:id="@+id/c3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/off"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/c2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/b3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/c"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="@id/c3"
+            app:layout_constraintStart_toStartOf="@id/c3"/>
+
+        <TextView
+            android:id="@+id/t3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Two leg person"
+            android:textStyle="bold"
+            android:textColor="#6A6AFF"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toTopOf="@id/c3"
+            app:layout_constraintStart_toEndOf="@id/b3"/>
+
+        <TextView
+            android:id="@+id/tt3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="You’ve got Two legs. Look what I can do,says Nicholas."
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/t3"
+            app:layout_constraintStart_toStartOf="@id/b3"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="너는 두 개의 다리가 있어. 내가 무엇을 할 수 있는지 봐봐 라고 니콜라스가 말한다"
+            android:textColor="#5C5D61"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tt3"
+            app:layout_constraintStart_toStartOf="@id/tt3"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/plus1.cl"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        
+        <ImageView
+            android:id="@+id/cc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/on"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <ImageView
+            android:id="@+id/bb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/a"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="@id/cc1"
+            app:layout_constraintStart_toStartOf="@id/cc1"/>
+
+        <TextView
+            android:id="@+id/ttt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Four leg donkey"
+            android:textStyle="bold"
+            android:textColor="#6A6AFF"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toTopOf="@id/cc1"
+            app:layout_constraintStart_toEndOf="@id/bb1"/>
+
+        <TextView
+            android:id="@+id/tttt1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="You’ve got four legs. Look what I can do,says Nicholas. "
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/ttt1"
+            app:layout_constraintStart_toStartOf="@id/bb1"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="너는 네 개의 다리가 있어. 내가 무엇을 할 수 있는지 봐봐 라고 니콜라스가 말한다"
+            android:textColor="#5C5D61"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tttt1"
+            app:layout_constraintStart_toStartOf="@id/tttt1"/>
+
+        <TextView
+            android:id="@+id/last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I bet you can’t do this,says Jacob. \n\n"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/cc1"
+            app:layout_constraintStart_toStartOf="@id/cc1"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/plus2.cl"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/last"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/line.ive1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/choice"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/line.ive1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/c11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/off"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/title1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/b11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/a"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toTopOf="@id/c11"
+                app:layout_constraintStart_toStartOf="@id/c11"/>
+
+            <TextView
+                android:id="@+id/t11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Our Home"
+                android:textStyle="bold"
+                android:textColor="#6A6AFF"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintTop_toTopOf="@id/c11"
+                app:layout_constraintStart_toEndOf="@id/b11"/>
+
+            <TextView
+                android:id="@+id/tt11"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Here’s our home spot,says Dad. Race you to the water! says Jacob."
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/t11"
+                app:layout_constraintStart_toStartOf="@id/b11"/>
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="여기 우리 집이 있다고 아빠가 말합니다. 물로 경주를 하러 가요! 제이콥이 말합니다."
+                android:textColor="#5C5D61"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/tt11"
+                app:layout_constraintStart_toStartOf="@id/tt11"/>
+
+            <ImageView
+                android:id="@+id/c21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/off"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/c11"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/b21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/b"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toTopOf="@id/c21"
+                app:layout_constraintStart_toStartOf="@id/c21"/>
+
+            <TextView
+                android:id="@+id/t21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Our Pinic"
+                android:textStyle="bold"
+                android:textColor="#6A6AFF"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintTop_toTopOf="@id/c21"
+                app:layout_constraintStart_toEndOf="@id/b21"/>
+
+            <TextView
+                android:id="@+id/tt21"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Here’s our picnic spot,says Dad. Race you to the water! says Jacob."
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/t21"
+                app:layout_constraintStart_toStartOf="@id/b21"/>
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="여기 우리 피크닉 장소가 있다고 아빠가 말합니다. 물로 경주를 하러 가요! 제이콥이 말합니다."
+                android:textColor="#5C5D61"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/tt21"
+                app:layout_constraintStart_toStartOf="@id/tt21"/>
+
+            <ImageView
+                android:id="@+id/c31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/off"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/c21"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/b31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/c"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toTopOf="@id/c31"
+                app:layout_constraintStart_toStartOf="@id/c31"/>
+
+            <TextView
+                android:id="@+id/t31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Our School"
+                android:textStyle="bold"
+                android:textColor="#6A6AFF"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="18dp"
+                app:layout_constraintTop_toTopOf="@id/c31"
+                app:layout_constraintStart_toEndOf="@id/b31"/>
+
+            <TextView
+                android:id="@+id/tt31"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Here’s our school spot,says Dad. Race you to the water! says Jacob."
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/t31"
+                app:layout_constraintStart_toStartOf="@id/b31"/>
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="여기 우리 학교 장소가 있다고 아빠가 말합니다. 물로 경주를 하러 가요! 제이콥이 말합니다."
+                android:textColor="#5C5D61"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/tt31"
+                app:layout_constraintStart_toStartOf="@id/tt31"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fun_cl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/plus1.cl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/cc11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/on"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <ImageView
+            android:id="@+id/bb11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/a"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="@id/cc11"
+            app:layout_constraintStart_toStartOf="@id/cc11"/>
+
+        <TextView
+            android:id="@+id/ttt11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Four leg donkey"
+            android:textStyle="bold"
+            android:textColor="#6A6AFF"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toTopOf="@id/cc11"
+            app:layout_constraintStart_toEndOf="@id/bb11"/>
+
+        <TextView
+            android:id="@+id/tttt11"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Here’s our home spot,says Dad. Race you to the water! says Jacob."
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/ttt11"
+            app:layout_constraintStart_toStartOf="@id/bb11"/>
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="여기 우리 피크닉 장소가 있다고 아빠가 말합니다. 물로 경주를 하러 가요! 제이콥이 말합니다."
+            android:textColor="#5C5D61"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tttt11"
+            app:layout_constraintStart_toStartOf="@id/tttt11"/>
+
+        <TextView
+            android:id="@+id/last1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Come and eat, boys and girls, says Mom. \n\n Time to go home, says Mom. \n\nSay goodbye to Jacob.\n\n"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/cc11"
+            app:layout_constraintStart_toStartOf="@id/cc11"/>
+
+        <ImageView
+            android:id="@+id/section.iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/book_section"
+            app:layout_constraintTop_toBottomOf="@id/last1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub1.tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="동화를 더 즐겨볼까요?"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/section.iv"
+            app:layout_constraintStart_toStartOf="@id/word_banner.iv"/>
+
+        <TextView
+            android:id="@+id/sub2.tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="단어장도 만들고 퀴즈도 풀어보며 \n 동화를 색다르게 즐겨봐요 :)"
+            android:textSize="16sp"
+            android:textColor="#5C5D61"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/sub1.tv"
+            app:layout_constraintStart_toStartOf="@id/sub1.tv"/>
+
+        <ImageView
+            android:id="@+id/word_banner.iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/book_word_banner"
+            android:layout_marginTop="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sub2.tv"/>
+
+        <TextView
+            android:id="@+id/word_title.tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="단어장을 만들자!"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginTop="26dp"
+            android:layout_marginStart="18dp"
+            app:layout_constraintTop_toTopOf="@id/word_banner.iv"
+            app:layout_constraintStart_toStartOf="@id/word_banner.iv"/>
+
+        <TextView
+            android:id="@+id/word_sub.iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내가 만든 동화에서 나오는 \n 단어를 오랬동안 간직해봐요!"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/word_title.tv"
+            app:layout_constraintStart_toStartOf="@id/word_title.tv"/>
+
+        <ImageView
+            android:id="@+id/word_btn.iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/book_word_btn"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="21dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/word_sub.iv"/>
+
+        <ImageView
+            android:id="@+id/quiz_banner.iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/book_quiz_banner"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/word_banner.iv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/quiz_title.tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="퀴즈 풀고 실력 UP!"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginTop="26dp"
+            android:layout_marginStart="18dp"
+            app:layout_constraintTop_toTopOf="@id/quiz_banner.iv"
+            app:layout_constraintStart_toStartOf="@id/quiz_banner.iv"/>
+
+        <TextView
+            android:id="@+id/quiz_sub.tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내가 만든 동화로 재밌는 \n 퀴즈를 풀어볼까요?"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/quiz_title.tv"
+            app:layout_constraintStart_toStartOf="@id/quiz_title.tv"/>
+
+        <ImageView
+            android:id="@+id/quiz_btn.iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/book_quiz_btn"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="21dp"
+            app:layout_constraintTop_toBottomOf="@id/quiz_sub.tv"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

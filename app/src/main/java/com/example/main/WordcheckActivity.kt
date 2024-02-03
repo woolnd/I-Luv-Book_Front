@@ -13,16 +13,16 @@ class WordcheckActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityWordcheckBinding
     private val wordPairs = listOf(
-        WordPair("apple", "사과"),
-        WordPair("banana", "바나나"),
-        WordPair("star", "별"),
-        WordPair("cup", "컵"),
-        WordPair("ice", "얼음"),
-        WordPair("book", "책"),
-        WordPair("candy", "사탕"),
-        WordPair("orange", "오렌지"),
-        WordPair("flower", "꽃"),
-        WordPair("animal", "동물")
+        WordPair("beautiful", "아름다운"),
+        WordPair("morning", "아침"),
+        WordPair("lovely", "사랑스러운"),
+        WordPair("day", "일"),
+        WordPair("picnic", "소풍"),
+        WordPair("dog", "개"),
+        WordPair("friend", "친구"),
+        WordPair("leg", "다리"),
+        WordPair("bird", "새"),
+        WordPair("tree", "나무")
         // 여기에 더 많은 단어 쌍을 추가할 수 있습니다.
     )
     private val unknownWords = mutableListOf<WordPair>()
@@ -79,12 +79,12 @@ class WordcheckActivity : AppCompatActivity() {
         } else {
             val intent = Intent(this, WordafterActivity::class.java)
 
-            val knownWordsList = ArrayList<Parcelable>(knownWords)
-            val unknownWordsList = ArrayList<Parcelable>(unknownWords)
+            val knownWordsList = ArrayList(knownWords)
+            val unknownWordsList = ArrayList(unknownWords)
 
             val intent1 = Intent(this, WordafterActivity::class.java)
-            intent1.putParcelableArrayListExtra("knownWords", knownWordsList)
-            intent1.putParcelableArrayListExtra("unknownWords", unknownWordsList)
+//            intent1.putExtra("knownWords", knownWordsList)
+//            intent1.putExtra("unknownWords", unknownWordsList)
             startActivity(intent1)
 
             currentIndex = 0

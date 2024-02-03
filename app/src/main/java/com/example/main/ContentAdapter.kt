@@ -25,6 +25,10 @@ class ContentAdapter: RecyclerView.Adapter<ContentAdapter.ViewHolder>(){
                     val intent = Intent(context, QuizTestActivity::class.java)
                     context.startActivity(intent)
                 }
+                binding.wordBtnIv.setOnClickListener {
+                    val intent = Intent(context, WordcheckActivity::class.java)
+                    context.startActivity(intent)
+                }
             }else{
                 binding.contentTv.text = item
             }

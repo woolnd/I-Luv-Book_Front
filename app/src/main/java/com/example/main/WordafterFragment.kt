@@ -30,8 +30,21 @@ class WordafterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val knownWords: ArrayList<WordPair>? = arguments?.getParcelableArrayList("unknownWords")
-        val unknownWords: ArrayList<WordPair>? = arguments?.getParcelableArrayList("knownWords")
+        val knownWords = listOf(
+            WordPair("beautiful", "아름다운"),
+            WordPair("morning", "아침"),
+            WordPair("lovely", "사랑스러운"),
+            WordPair("day", "일")
+            // 여기에 더 많은 단어 쌍을 추가할 수 있습니다.
+        )
+        val unknownWord = listOf(
+            WordPair("picnic", "소풍"),
+            WordPair("dog", "개"),
+            WordPair("friend", "친구"),
+            WordPair("leg", "다리"),
+            WordPair("bird", "새"),
+            WordPair("tree", "나무")
+        )
 
         val scale: Float = resources.displayMetrics.scaledDensity
         val parentLayout_wrong = binding.wordAfKeywordWrongLl
@@ -66,7 +79,7 @@ class WordafterFragment : Fragment() {
             parentLayout_wrong.addView(dynamictv_wrong)
         }
 
-        unknownWords?.forEach { wordPair ->
+        unknownWord?.forEach { wordPair ->
             val dynamictv_correct = TextView(requireContext())
             dynamictv_correct.text = "${wordPair.english} : ${wordPair.korean}"
             dynamictv_correct.textSize = originaltv_correct.textSize / scale

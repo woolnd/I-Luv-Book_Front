@@ -65,12 +65,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="56dp"
-        android:text="The dog and His bone"
+        android:text="A Beautiful Day"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/word_ch_booktitle.iv"
         app:layout_constraintTop_toTopOf="@+id/word_ch_booktitle.iv" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/word_ch_booktitle.iv"
@@ -230,7 +231,7 @@
         android:id="@+id/word_ch_footer.cl"
         android:layout_width="match_parent"
         android:layout_height="76dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 

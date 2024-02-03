@@ -24,11 +24,11 @@ class QuizTestActivity: AppCompatActivity() {
 
 
         val quizDataList = listOf(
-            QuizData("title1", "option1", "option2", "option3", 1),
-            QuizData("title2", "option1", "option2", "option3", 1),
-            QuizData("title3", "option1", "option2", "option3", 1),
-            QuizData("title4", "option1", "option2", "option3", 1),
-            QuizData("title5", "option1", "option2", "option3", 1)
+            QuizData("다음 중 니콜라스의 아침 인사를 받은 대상은 누구인가요?", "엄마", "태양", "도끼", 2),
+            QuizData("니콜라스 가족은 어디에서 소풍을 가기로 결정했나요?", "호수", "강가", "산", 2),
+            QuizData("니콜라스가 소풍에 데려가고 싶어한 친구의 이름은 무엇인가요?", "제이콥", "도끼", "개", 1),
+            QuizData(" 다음 중 소풍에 가고 싶어하는 동물은 누구인가요?", "새", "도키", "개", 2),
+            QuizData("니콜라스와 경주에서 이긴 동물은 누구인가요?", "새", "도키", "개", 2)
         )
 
 
@@ -58,7 +58,7 @@ class QuizTestActivity: AppCompatActivity() {
     private fun showQuiz(quizData: QuizData, currentQuizIndex: Int) {
         var current = currentQuizIndex.toInt() + 1
         binding.quizChipTv.text = "Quiz." + current.toString()
-        binding.quizTitleTv.text = quizData.title
+        binding.quizTitleTv.text = "A Beautiful Day"
         binding.quizContentTv.text = quizData.title
         binding.select1Tv.text = quizData.option1
         binding.select2Tv.text = quizData.option2
