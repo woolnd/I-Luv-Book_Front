@@ -18,12 +18,11 @@ class WordafterActivity : AppCompatActivity() {
         binding = ActivityWordafterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         val fragment = WordafterFragment()
-        val bundle = Bundle()
-        bundle.putStringArrayList("knownWords",intent.getStringArrayListExtra("knownWords"))
-        bundle.putStringArrayList("unknownWords",intent.getStringArrayListExtra("unknownWords"))
-        fragment.arguments = bundle
+//        val bundle = Bundle()
+//        bundle.putStringArrayList("knownWords",intent.getStringArrayListExtra("knownWords"))
+//        bundle.putStringArrayList("unknownWords",intent.getStringArrayListExtra("unknownWords"))
+//        fragment.arguments = bundle
         setFragment(fragment)
 
         binding.wordAfBackIv.setOnClickListener{

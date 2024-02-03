@@ -41,13 +41,4 @@
         app:layout_constraintStart_toStartOf="@id/wordbanner.iv"/>
 
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/word_meaningshow"
-            android:layout_marginBottom="30dp"
-            app:layout_constraintBottom_toBottomOf="@id/wordbanner.iv"
-            app:layout_constraintStart_toStartOf="@id/wordbanner.iv"
-            app:layout_constraintEnd_toEndOf="@id/wordbanner.iv"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
